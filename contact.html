@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Contact</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;1,200;1,300&display=swap" rel="stylesheet">
+    <script type="text/Javascript">
+    function validate() {
+        if(document.contactform.name.value=="")
+        {
+            alert("Please enter your name");
+            document.contactform.name.focus();
+            return false;
+        }
+        if(document.contactform.mailid.value=="")
+        {
+            alert("Please enter your mail id");
+            document.contactform.mailid.focus();
+            return false;
+        }
+        if(document.contactform.phone.value=="")
+        {
+            alert("Please enter your phone number");
+            document.contactform.phone.focus();
+            return false;
+        }
+        return true;
+    }
+    function response()
+    {
+        alert("Thank You! Message has be sent successfully");
+    }
+    </script>
+</head>
+<body>
+    <div class="container3">
+        <h1>Contact Form</h1>
+        <p>I would love to respond to your queries and help you succeed.</p>  
+        <form name="contactform" onsubmit="return(validate())">
+                 <br>Name:<input type="text" name="name" value=""><br>
+                <br>Mail ID:<input type="text" name="mailid" value=""><br>
+                <br>Phone Number:<input type="number" name="phone" value=""><br>
+                Message:<br><textarea></textarea>
+                <br><button onclick="response()">Send</button>   
+                <br><a href="index.html">Back To Home</a>           
+        </form>
+        
+    </div>
+</body>
+</html>
